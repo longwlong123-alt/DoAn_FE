@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        header h1 {
+            font-size: 50px;
+            background: url(laco.gif);
+            background-size: contain;
+            color: transparent;
+            background-clip: text;
+        }
+
+        header h5 {
+            text-decoration: overline;
+        }
+
+        header img {
+            border-radius: 100px 0;
+        }
+
+        .card img {
+            transition: transform .3s;
+        }
+
+        .card img:hover {
+            transform: translateY(5px);
+        }
+
+        .footer {
+            background: #333;
+            color: #ccc;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+
+        .footer h5 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 15px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* Responsive cho header trên iPad Pro và thiết bị nhỏ hơn */
+        @media (max-width: 991.98px) {
+
+            .navbar .form-inline,
+            .navbar form.d-flex {
+                margin-top: 10px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .navbar .form-control,
+            .navbar .btn {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-lg">
+        <!-- header -->
+        <header class="row">
+            <!-- phan chu  -->
+            <div class="col-md-6 d-flex  align-items-end " style="text-align: center; ">
+                <div>
+                    <h1> MÓN ĂN VIỆT NAM </h1>
+                    <h5>HƯƠNG VỊ CỦA MÓN ĂN VIỆT,ĐÔI KHI MỌC MẠC,ĐÔI KHI CAY XÈ </h5>
+                </div>
+            </div>
+            <!-- phan hinh  -->
+            <div class="col-md-6 " style="text-align: right;">
+                <img width="80%" src="banner.png" alt="hinh">
+            </div>
+        </header>
+        <!-- nav -->
+        <nav class="navbar rounded-4 navbar-expand-lg bg-dark" data-bs-theme="dark" style="margin-bottom:10px;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="bi bi-house-fill text-info fs-3"></i>Trang
+                                chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-list text-primary fs-3"></i>Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-telephone-fill text-success fs-3"></i>Liên
+                                hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-envelope-fill text-warning fs-3"></i>Góp ý</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-question text-light fs-3"></i>Hỏi đáp</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-person-fill text-info fs-3"></i> Tài khoản
+                            </a>
+                            <ul class="dropdown-menu" style="font-size: 20px;">
+                                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                                <li><a class="dropdown-item" href="#">Quên mật khẩu</a></li>
+                                <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                                <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                                <li><a class="dropdown-item" href="#">Cập nhật</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Đơn hàng</a></li>
+                                <li><a class="dropdown-item" href="#">Hàng đã mua</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- body -->
+        <main class="row">
+            <!-- sản phẩm -->
+            <section class="col-12 col-md-8 col-lg-9">
+                <div class="row g-3">
+                    <!-- mỗi sản phẩm -->
+                    <div class="col-lg-4 col-md-6 ">
+                        <div class="card h-100 text-center">
+                            <div class="card-header">Sò điệp trứng muối</div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="gallery-img-02.jpg" alt="hinh"
+                                    class="card-img-top img-fluid rounded">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">100,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark ">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 cot  san pham -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow-lg text-center">
+                            <div class="card-header">
+                                Sò lông
+                            </div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="gallery-img-01.jpg" alt="hinh">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">50,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 cot  san pham -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow text-center">
+                            <div class="card-header">
+                                Rau sống
+                            </div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="gallery-img-03.jpg" alt="hinh">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">10,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 cot  san pham -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow text-center">
+                            <div class="card-header">
+                                Mì tươi
+                            </div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="img-08.jpg" alt="hinh">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">70,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 cot  san pham -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow text-center">
+                            <div class="card-header">
+                                Cá hồi
+                            </div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="img-07.jpg" alt="hinh">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">80,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 cot  san pham -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow text-center">
+                            <div class="card-header">
+                                Gà lá hấp lá chanh
+                            </div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="img-09.jpg" alt="hinh">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">40,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 cot  san pham -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow text-center">
+                            <div class="card-header">
+                                Các loại hạt
+                            </div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="slider-01.jpg" alt="hinh">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">80,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 cot  san pham -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow text-center">
+                            <div class="card-header">
+                                Trái cây
+                            </div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="slider-02.jpg" alt="hinh">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">90,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 cot  san pham -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow text-center">
+                            <div class="card-header">
+                                Bò nướng
+                            </div>
+                            <div class="card-body">
+                                <img style="border-radius: 15px;" width="100%" src="slider-03.jpg" alt="hinh">
+                            </div>
+                            <div class="card-footer">
+                                <h4 class="text-danger">90,000<sup>đ</sup></h4>
+                                <a href="" class="btn btn-dark">Mua</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- aside -->
+            <aside class="col-12 col-md-4 col-lg-3 mt-4 mt-md-0">
+                <div class="card mb-3 shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-4 text-center">
+                            <img src="shoppingcart.gif" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body p-2">
+                                Mua ngay chỉ cần 100k<br>
+                                <p class="mb-2">Giá ưu đãi hôm nay</p>
+                                <a href="#" class="btn btn-primary btn-sm">ĐẶT NGAY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm w-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">KEYWORDS</li>
+                    </ul>
+                </div>
+
+                <ul class="list-group list-group-flush shadow-sm mt-3 text-center">
+                    <div class="">
+                        <li class="list-group-item bg-success-subtle bg-dark-subtle" style="margin-bottom: 10px;"><i
+                                class="bi bi-menu-button-wide-fill"></i>MENU</li>
+
+                        <li class="list-group-item bg-success-subtle"
+                            style="margin-bottom: 10px; margin-left: 40px; margin-right: 40px; ">Sò điệp trứng muối
+                        </li>
+                        <li class="list-group-item" style="margin-bottom: 10px;margin-left: 40px; margin-right: 40px;">
+                            Sò lông
+                        </li>
+                        <li class="list-group-item bg-info-subtle"
+                            style="margin-bottom: 10px;margin-left: 40px; margin-right: 40px;"> Bò nướng</li>
+                        <li class="list-group-item bg-warning-subtle"
+                            style="margin-bottom: 10px;margin-left: 40px; margin-right: 40px;"> Các loại hạt</li>
+                        <li class="list-group-item bg-danger-subtle"
+                            style="margin-bottom: 10px;margin-left: 40px; margin-right: 40px;">Trái cây</li>
+                        <li class="list-group-item bg-danger-subtle"
+                            style="margin-bottom: 10px;margin-left: 40px; margin-right: 40px;">Gà hấp lá chanh</li>
+                        <li class="list-group-item bg-danger-subtle"
+                            style="margin-bottom: 10px;margin-left: 40px; margin-right: 40px;">Cá hồi</li>
+                    </div>
+                </ul>
+            </aside>
+        </main>
+
+        <!-- phân trang -->
+        <nav aria-label="Page navigation example" class="mt-4">
+            <ul class="pagination justify-content-center justify-content-md-end">
+                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+            </ul>
+        </nav>
+
+        <!-- footer -->
+        <footer class="footer mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 mb-4">
+                        <h5>THÔNG TIN</h5>
+                        <p>
+                            Cửa hàng quê chuyên cung cấp bán món ăn Việt số 1 Việt Nam
+                            về doanh thu và lợi nhuận, với mạng lưới hơn 3.600 cửa hàng toàn quốc.
+                            Ngoài ra Món Ăn Việt đã mở rộng ra thị trường nước ngoài.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <h5>THỰC PHẨM</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Cá đồng</a></li>
+                            <li><a href="#">Rau xanh</a></li>
+                            <li><a href="#">Bò Việt</a></li>
+                            <li><a href="#">Gà vườn</a></li>
+                            <li><a href="#">Óc</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <h5>THÔNG TIN NHANH</h5>
+                        <ul class="list-unstyled">
+                            <li>Gọi mua hàng: 1800.1060</li>
+                            <li>Gọi khiếu nại: 1800.1062</li>
+                            <li>Gọi tư vấn: 1800.1064</li>
+                            <li>Gọi dự án: 1800.1763</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">Copyright © 2027 MONANVIET</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
